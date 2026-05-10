@@ -1,0 +1,91 @@
+import { dishes } from "./dishes";
+import { ingredients } from "./ingredients";
+import { regions } from "./regions";
+import { lineages } from "./lineages";
+import { techniques } from "./techniques";
+import type { AnyEntry, Dish, EntryType, Ingredient, Lineage, Region, RelatedEntry, Technique } from "@/lib/schemas/types";
+
+export { dishes, ingredients, regions, lineages, techniques };
+
+export function getPublishedDishes(): Dish[] {
+  return dishes.filter((d) => d.published);
+}
+export function getPublishedIngredients(): Ingredient[] {
+  return ingredients.filter((i) => i.published);
+}
+export function getPublishedRegions(): Region[] {
+  return regions.filter((r) => r.published);
+}
+export function getPublishedLineages(): Lineage[] {
+  return lineages.filter((l) => l.published);
+}
+export function getPublishedTechniques(): Technique[] {
+  return techniques.filter((t) => t.published);
+}
+
+export function getDish(slug: string): Dish | undefined {
+  return getPublishedDishes().find((d) => d.slug === slug);
+}
+export function getIngredient(slug: string): Ingredient | undefined {
+  return getPublishedIngredients().find((i) => i.slug === slug);
+}
+export function getRegion(slug: string): Region | undefined {
+  return getPublishedRegions().find((r) => r.slug === slug);
+}
+export function getLineage(slug: string): Lineage | undefined {
+  return getPublishedLineages().find((l) => l.slug === slug);
+}
+export function getTechnique(slug: string): Technique | undefined {
+  return getPublishedTechniques().find((t) => t.slug === slug);
+}
+
+export function getEntry(type: EntryType, slug: string): AnyEntry | undefined {
+  switch (type) {
+    case "dish":
+      return getDish(slug);
+    case "ingredient":
+      return getIngredient(slug);
+    case "region":
+      return getRegion(slug);
+    case "lineage":
+      return getLineage(slug);
+    case "technique":
+      return getTechnique(slug);
+  }
+}
+
+export function allEntries(): AnyEntry[] {
+  return [
+    ...getPublishedDishes(),
+    ...getPublishedIngredients(),
+    ...getPublishedRegions(),
+    ...getPublishedLineages(),
+    ...getPublishedTechniques(),
+  ];
+}
+
+const TYPE_TO_PATH: Record<EntryType, string> = {
+  dish: "/dishes",
+  ingredient: "/ingredients",
+  region: "/regions",
+  lineage: "/lineages",
+  technique: "/techniques",
+};
+
+export function entryHref(ref: RelatedEntry | { type: EntryType; slug: string }): string {
+  return `${TYPE_TO_PATH[ref.type]}/${ref.slug}`;
+}
+
+export function entryLabel(type: EntryType): string {
+  return {
+    dish: "Dish",
+    ingredient: "Ingredient",
+    region: "Region",
+    lineage: "Lineage",
+    technique: "Technique",
+  }[type];
+}
+
+export function resolveRelated(refs: RelatedEntry[]): { ref: RelatedEntry; entry: AnyEntry | undefined }[] {
+  return refs.map((ref) => ({ ref, entry: getEntry(ref.type, ref.slug) }));
+}
