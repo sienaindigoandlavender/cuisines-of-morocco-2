@@ -4,7 +4,7 @@ import { allEntries, entryHref } from "@/lib/data";
 const SITE = "https://cuisinesofmorocco.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/dishes", "/ingredients", "/regions", "/lineages", "/techniques", "/search"].map((p) => ({
+  const staticRoutes = ["", "/dishes", "/ingredients", "/regions", "/produce", "/lineages", "/techniques", "/glossary", "/search"].map((p) => ({
     url: `${SITE}${p}`,
     lastModified: new Date(),
   }));

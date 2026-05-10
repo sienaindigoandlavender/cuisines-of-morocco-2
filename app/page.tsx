@@ -87,8 +87,10 @@ export default function Home() {
           <li><Link href="/dishes">Dishes</Link></li>
           <li><Link href="/ingredients">Ingredients</Link></li>
           <li><Link href="/regions">Regions</Link></li>
+          <li><Link href="/produce">Produce</Link></li>
           <li><Link href="/lineages">Lineages</Link></li>
           <li><Link href="/techniques">Techniques</Link></li>
+          <li><Link href="/glossary">Glossary</Link></li>
         </ul>
       </section>
 

@@ -11,6 +11,7 @@ export const dishes: Dish[] = [
     one_line_placement: "The four-o'clock cake.",
     published: true,
     illustration_filename: "meskouta.svg",
+    categories: ["sweet", "pastry", "tea-time", "everyday"],
     recipe_block: {
       servings: "One 23 cm round / 8 slices",
       total_time: "1 hr",
@@ -67,6 +68,7 @@ export const dishes: Dish[] = [
     one_line_placement: "The dish a mother is fed after she gives birth.",
     published: true,
     illustration_filename: "rfissa.svg",
+    categories: ["savory", "umami", "stew", "postpartum", "celebration"],
     recipe_block: {
       ingredients: [],
       method: [],
@@ -89,6 +91,7 @@ export const dishes: Dish[] = [
     one_line_placement: "The soup that opens the Ramadan fast.",
     published: true,
     illustration_filename: "harira.svg",
+    categories: ["savory", "umami", "soup", "ramadan"],
     recipe_block: {
       ingredients: [],
       method: [],
@@ -110,6 +113,7 @@ export const dishes: Dish[] = [
     one_line_placement: "The winter-morning bean soup of the north.",
     published: true,
     illustration_filename: "bissara.svg",
+    categories: ["savory", "soup", "breakfast", "winter", "everyday"],
     recipe_block: {
       ingredients: [],
       method: [],
@@ -131,6 +135,7 @@ export const dishes: Dish[] = [
     one_line_placement: "The toasted-flour-and-almond paste eaten through Ramadan and after childbirth.",
     published: true,
     illustration_filename: "sellou.svg",
+    categories: ["sweet", "snack", "ramadan", "postpartum"],
     recipe_block: {
       ingredients: [],
       method: [],
@@ -153,6 +158,7 @@ export const dishes: Dish[] = [
     one_line_placement: "The thousand-hole pancake of a slow Friday morning.",
     published: true,
     illustration_filename: "baghrir.svg",
+    categories: ["sweet", "bread", "breakfast", "friday"],
     recipe_block: {
       ingredients: [],
       method: [],
@@ -175,6 +181,7 @@ export const dishes: Dish[] = [
     one_line_placement: "The Friday couscous, crowned with caramelised onion and raisin.",
     published: true,
     illustration_filename: "couscous-tfaya.svg",
+    categories: ["sweet", "savory", "umami", "stew", "friday", "celebration"],
     recipe_block: {
       ingredients: [],
       method: [],
@@ -197,6 +204,7 @@ export const dishes: Dish[] = [
     one_line_placement: "The bachelor's pot, buried in the ashes of the hammam furnace.",
     published: true,
     illustration_filename: "tangia.svg",
+    categories: ["savory", "umami", "sour", "stew", "celebration"],
     recipe_block: {
       ingredients: [],
       method: [],
@@ -221,6 +229,7 @@ export const dishes: Dish[] = [
     one_line_placement: "Preserved beef in spiced fat — the larder dish of the Atlas.",
     published: true,
     illustration_filename: "khlii.svg",
+    categories: ["savory", "umami", "salty", "preserve", "condiment", "winter"],
     recipe_block: {
       ingredients: [],
       method: [],

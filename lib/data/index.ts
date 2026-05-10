@@ -3,9 +3,24 @@ import { ingredients } from "./ingredients";
 import { regions } from "./regions";
 import { lineages } from "./lineages";
 import { techniques } from "./techniques";
-import type { AnyEntry, Dish, EntryType, Ingredient, Lineage, Region, RelatedEntry, Technique } from "@/lib/schemas/types";
+import { glossaryTerms } from "./glossary";
+import { produce } from "./produce";
+import type {
+  AnyEntry,
+  Dish,
+  EntryType,
+  GlossaryCategory,
+  GlossaryTerm,
+  Ingredient,
+  Lineage,
+  Produce,
+  ProduceKind,
+  Region,
+  RelatedEntry,
+  Technique,
+} from "@/lib/schemas/types";
 
-export { dishes, ingredients, regions, lineages, techniques };
+export { dishes, ingredients, regions, lineages, techniques, glossaryTerms, produce };
 
 export function getPublishedDishes(): Dish[] {
   return dishes.filter((d) => d.published);
@@ -130,3 +145,102 @@ export function computeInboundWeights(): Map<string, number> {
 export function weightOf(weights: Map<string, number>, entry: { type: EntryType; slug: string }): number {
   return weights.get(`${entry.type}:${entry.slug}`) ?? 0;
 }
+
+/**
+ * Categories that an entry can carry (only dishes/ingredients/techniques have
+ * categories). Returns the full set, deduped.
+ */
+type CategorisableEntry = (Dish | Ingredient | Technique) & { categories?: GlossaryCategory[] };
+
+export function entriesByCategory(category: GlossaryCategory): AnyEntry[] {
+  const out: CategorisableEntry[] = [];
+  for (const d of getPublishedDishes()) if (d.categories?.includes(category)) out.push(d);
+  for (const i of getPublishedIngredients()) if (i.categories?.includes(category)) out.push(i);
+  for (const t of getPublishedTechniques()) if (t.categories?.includes(category)) out.push(t);
+  return out as AnyEntry[];
+}
+
+export function glossaryTermsByCategory(category: GlossaryCategory): GlossaryTerm[] {
+  return glossaryTerms.filter((g) => g.categories.includes(category));
+}
+
+export function getGlossaryTerm(slug: string): GlossaryTerm | undefined {
+  return glossaryTerms.find((g) => g.slug === slug);
+}
+
+export function getProduce(slug: string): Produce | undefined {
+  return produce.find((p) => p.slug === slug);
+}
+
+export function produceByKind(kind: ProduceKind): Produce[] {
+  return produce.filter((p) => p.kind === kind);
+}
+
+export const PRODUCE_KIND_LABELS: Record<ProduceKind, string> = {
+  meat: "Meat",
+  seafood: "Seafood",
+  fruit: "Fruit",
+  vegetable: "Vegetable",
+  grain: "Grain",
+  spice: "Spice",
+  "tree-fruit": "Tree fruit",
+  dairy: "Dairy",
+  fat: "Fat / oil",
+  preserve: "Preserve",
+};
+
+export const CATEGORY_LABELS: Record<GlossaryCategory, string> = {
+  // Flavors
+  sweet: "Sweet",
+  savory: "Savory",
+  sour: "Sour",
+  bitter: "Bitter",
+  umami: "Umami",
+  salty: "Salty",
+  // Forms
+  pastry: "Pastries",
+  bread: "Breads",
+  soup: "Soups",
+  stew: "Stews",
+  salad: "Salads",
+  drink: "Drinks",
+  snack: "Snacks",
+  condiment: "Condiments",
+  preserve: "Preserves",
+  "spice-blend": "Spice blends",
+  fat: "Fats & oils",
+  // Occasions
+  everyday: "Everyday",
+  ramadan: "Ramadan",
+  celebration: "Celebration",
+  breakfast: "Breakfast",
+  "tea-time": "Tea time",
+  friday: "Friday",
+  postpartum: "Postpartum",
+  winter: "Winter",
+};
+
+export const FLAVOR_CATEGORIES: GlossaryCategory[] = ["sweet", "savory", "sour", "bitter", "umami", "salty"];
+export const FORM_CATEGORIES: GlossaryCategory[] = [
+  "pastry",
+  "bread",
+  "soup",
+  "stew",
+  "salad",
+  "drink",
+  "snack",
+  "condiment",
+  "preserve",
+  "spice-blend",
+  "fat",
+];
+export const OCCASION_CATEGORIES: GlossaryCategory[] = [
+  "everyday",
+  "ramadan",
+  "celebration",
+  "breakfast",
+  "tea-time",
+  "friday",
+  "postpartum",
+  "winter",
+];

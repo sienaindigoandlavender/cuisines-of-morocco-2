@@ -55,8 +55,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/dishes">Dishes</Link>
               <Link href="/ingredients">Ingredients</Link>
               <Link href="/regions">Regions</Link>
+              <Link href="/produce">Produce</Link>
               <Link href="/lineages">Lineages</Link>
               <Link href="/techniques">Techniques</Link>
+              <Link href="/glossary">Glossary</Link>
               <Link href="/search">Search</Link>
             </nav>
           </div>
