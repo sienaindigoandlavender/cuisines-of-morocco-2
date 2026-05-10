@@ -4,6 +4,7 @@ import { getDish, getPublishedDishes } from "@/lib/data";
 import { EntryHeader } from "@/components/EntryHeader";
 import { CrossLinkFooter } from "@/components/CrossLinkFooter";
 import { CrossDomainBlock } from "@/components/CrossDomainLinks";
+import { NeighborhoodCloud } from "@/components/NeighborhoodCloud";
 import { JsonLd, recipeJsonLd } from "@/lib/seo/structured-data";
 
 type Params = { slug: string };
@@ -104,6 +105,7 @@ export default async function DishPage({ params }: { params: Promise<Params> }) 
         )}
       </section>
 
+      <NeighborhoodCloud refs={d.related_entries} title="Neighbourhood" />
       <CrossDomainBlock links={d.cross_domain} zfritiSkus={d.zfriti_skus} />
       <CrossLinkFooter refs={d.related_entries} />
     </article>

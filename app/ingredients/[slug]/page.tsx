@@ -5,6 +5,7 @@ import { entryHref, getDish, getIngredient, getPublishedIngredients, getRegion }
 import { EntryHeader } from "@/components/EntryHeader";
 import { CrossLinkFooter } from "@/components/CrossLinkFooter";
 import { CrossDomainBlock } from "@/components/CrossDomainLinks";
+import { NeighborhoodCloud } from "@/components/NeighborhoodCloud";
 
 type Params = { slug: string };
 
@@ -74,6 +75,7 @@ export default async function IngredientPage({ params }: { params: Promise<Param
 
       <hr className="threshold" aria-hidden />
 
+      <NeighborhoodCloud refs={i.related_entries} title="Neighbourhood" />
       <CrossDomainBlock links={i.cross_domain} />
       <CrossLinkFooter refs={i.related_entries} />
     </article>

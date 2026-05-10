@@ -4,7 +4,11 @@ The repo behind [cuisinesofmorocco.com](https://cuisinesofmorocco.com) — a
 memory-led, recipe-first culinary wiki of Moroccan food.
 
 Part of the Slow Morocco / Dancing with Lions ecosystem. Standalone domain,
-deeply cross-linkable, illustration-only (no food photography, ever).
+deeply cross-linkable.
+
+**V1 is wiki + tag clouds.** Every page leads with text and a weighted
+tag cloud of related entries. Illustrations and photographs get woven in
+later — once the corpus is solid the visual layer follows.
 
 ## Stack
 
@@ -31,6 +35,21 @@ Five content collections, each with its own schema in `lib/schemas/types.ts`:
 Each entry renders through the matching page template under
 `app/<type>s/[slug]/page.tsx` and is indexed at `app/<type>s/page.tsx`.
 
+## Tag clouds
+
+Every page carries a weighted tag cloud. Weights are derived from the
+content graph itself (inbound links + `signature_*` / `used_in` /
+`dishes_carrying_it` arrays) — the more an entry is pointed at, the larger
+it sits in the cloud. See `components/TagCloud.tsx` and
+`computeInboundWeights()` in `lib/data/index.ts`.
+
+Where clouds appear:
+
+- **Homepage:** the whole wiki, weighted, plus per-type alphabetical clouds
+- **Index pages:** one weighted cloud of the type, above the card grid
+- **Entry pages:** a "neighbourhood" cloud built from `related_entries`,
+  placed below the threshold prose, above the see-also footer
+
 ## The threshold
 
 Every entry has the same structural inversion:
@@ -55,18 +74,22 @@ Four components in `components/CrossDomainLinks.tsx`:
 All are wired through the `cross_domain` field on each entry. Empty fields
 render nothing.
 
-## Illustration
+## Illustration & photography (coming later)
+
+V1 is text-led; the visual layer follows. The components are in place so
+entries can be progressively enriched without template changes:
 
 - `<BotanicalIllustration filename="…" />` — SVG drawings in
-  `public/illustrations/`
+  `public/illustrations/`. The header only renders it when
+  `withIllustration` is explicitly set on `<EntryHeader>`, so entries
+  stay text-first until art is commissioned.
 - `<RegionMap center={…} filename="…" />` — interactive Mapbox map when
   `NEXT_PUBLIC_MAPBOX_TOKEN` is set in the environment; otherwise the
-  hand-drawn SVG placeholder in `public/maps/`. The token is wired through
-  Vercel project env vars and is not committed to the repo. See
-  `.env.example`.
+  hand-drawn SVG placeholder in `public/maps/`. The token is wired
+  through Vercel project env vars and is not committed. See `.env.example`.
 
-Both fall back to a placeholder SVG so the site renders cleanly while
-illustrations are commissioned. **No food photography. Ever.**
+Photography will be woven in entry by entry as it gets shot. There is no
+photography in V1.
 
 ## SEO
 

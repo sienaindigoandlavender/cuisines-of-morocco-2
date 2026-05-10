@@ -89,3 +89,44 @@ export function entryLabel(type: EntryType): string {
 export function resolveRelated(refs: RelatedEntry[]): { ref: RelatedEntry; entry: AnyEntry | undefined }[] {
   return refs.map((ref) => ({ ref, entry: getEntry(ref.type, ref.slug) }));
 }
+
+/**
+ * Weight each entry by how many other entries point at it. Used to size
+ * items in the tag cloud — the more-linked the entry, the larger it
+ * appears.
+ */
+export function computeInboundWeights(): Map<string, number> {
+  const counts = new Map<string, number>();
+  const key = (type: EntryType, slug: string) => `${type}:${slug}`;
+  for (const e of allEntries()) {
+    for (const r of e.related_entries) {
+      const k = key(r.type, r.slug);
+      counts.set(k, (counts.get(k) ?? 0) + 1);
+    }
+  }
+  // Add region/ingredient/dish array references too.
+  for (const r of regions) {
+    if (!r.published) continue;
+    for (const s of r.signature_dishes) counts.set(key("dish", s), (counts.get(key("dish", s)) ?? 0) + 1);
+    for (const s of r.signature_ingredients)
+      counts.set(key("ingredient", s), (counts.get(key("ingredient", s)) ?? 0) + 1);
+  }
+  for (const l of lineages) {
+    if (!l.published) continue;
+    for (const s of l.dishes_carrying_it) counts.set(key("dish", s), (counts.get(key("dish", s)) ?? 0) + 1);
+    for (const s of l.regions_associated) counts.set(key("region", s), (counts.get(key("region", s)) ?? 0) + 1);
+  }
+  for (const t of techniques) {
+    if (!t.published) continue;
+    for (const s of t.dishes_using_it) counts.set(key("dish", s), (counts.get(key("dish", s)) ?? 0) + 1);
+  }
+  for (const i of ingredients) {
+    if (!i.published) continue;
+    for (const s of i.used_in) counts.set(key("dish", s), (counts.get(key("dish", s)) ?? 0) + 1);
+  }
+  return counts;
+}
+
+export function weightOf(weights: Map<string, number>, entry: { type: EntryType; slug: string }): number {
+  return weights.get(`${entry.type}:${entry.slug}`) ?? 0;
+}

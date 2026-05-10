@@ -5,6 +5,7 @@ import { entryHref, getDish, getIngredient, getPublishedRegions, getRegion } fro
 import { EntryHeader } from "@/components/EntryHeader";
 import { CrossLinkFooter } from "@/components/CrossLinkFooter";
 import { CrossDomainBlock } from "@/components/CrossDomainLinks";
+import { NeighborhoodCloud } from "@/components/NeighborhoodCloud";
 import { RegionMap } from "@/components/RegionMap";
 import { JsonLd, articleJsonLd } from "@/lib/seo/structured-data";
 
@@ -89,6 +90,7 @@ export default async function RegionPage({ params }: { params: Promise<Params> }
         <p>{r.narrative}</p>
       </section>
 
+      <NeighborhoodCloud refs={r.related_entries} title="Neighbourhood" />
       <CrossDomainBlock links={r.cross_domain} />
       <CrossLinkFooter refs={r.related_entries} />
     </article>
