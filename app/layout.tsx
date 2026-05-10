@@ -1,6 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Source_Serif_4, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+
+const serif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cuisinesofmorocco.com"),
@@ -24,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
       <body>
         <header className="site-header">
           <div className="site-header__inner">
@@ -43,24 +63,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main>{children}</main>
         <footer className="site-footer">
-          <p>
-            Part of the Slow Morocco ecosystem ·{" "}
-            <a href="https://slowmorocco.com" rel="external">
-              Slow Morocco
-            </a>{" "}
-            ·{" "}
-            <a href="https://aboutheamazigh.com" rel="external">
-              About The Amazigh
-            </a>{" "}
-            ·{" "}
-            <a href="https://derb.so" rel="external">
-              Derb.so
-            </a>{" "}
-            ·{" "}
-            <a href="https://riaddisiena.com" rel="external">
-              Riad di Siena
-            </a>
-          </p>
+          <div className="site-footer__inner">
+            <p className="site-footer__brand">Cuisines of Morocco</p>
+            <p className="site-footer__tag">
+              A memory-led, recipe-first culinary wiki of Moroccan food.
+            </p>
+          </div>
+          <div className="site-footer__meta">
+            <p>
+              A <span className="site-footer__strong">Slow Morocco</span> Project
+            </p>
+            <p className="site-footer__sisters">
+              <a href="https://slowmorocco.com" rel="external">Slow Morocco</a>
+              <span aria-hidden>/</span>
+              <a href="https://aboutheamazigh.com" rel="external">About The Amazigh</a>
+              <span aria-hidden>/</span>
+              <a href="https://derb.so" rel="external">Derb.so</a>
+              <span aria-hidden>/</span>
+              <a href="https://riaddisiena.com" rel="external">Riad di Siena</a>
+            </p>
+          </div>
         </footer>
       </body>
     </html>
