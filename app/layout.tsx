@@ -66,23 +66,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <footer className="site-footer">
           <div className="site-footer__inner">
-            <p className="site-footer__brand">Cuisines of Morocco</p>
-            <p className="site-footer__tag">
-              A memory-led, recipe-first culinary wiki of Moroccan food.
+            <p className="site-footer__copyright">
+              © {new Date().getFullYear()} Cuisines of Morocco
             </p>
-          </div>
-          <div className="site-footer__meta">
-            <p>
-              A <span className="site-footer__strong">Slow Morocco</span> Project
-            </p>
-            <p className="site-footer__sisters">
-              <a href="https://slowmorocco.com" rel="external">Slow Morocco</a>
+            <p className="site-footer__credits">
+              <span>
+                A <span className="site-footer__strong">Slow Morocco</span> Project
+              </span>
               <span aria-hidden>/</span>
-              <a href="https://aboutheamazigh.com" rel="external">About The Amazigh</a>
-              <span aria-hidden>/</span>
-              <a href="https://derb.so" rel="external">Derb.so</a>
-              <span aria-hidden>/</span>
-              <a href="https://riaddisiena.com" rel="external">Riad di Siena</a>
+              <span>
+                Powered by{" "}
+                <a href="https://dancewithlions.com" target="_blank" rel="noreferrer">
+                  Dancing with Lions
+                </a>
+              </span>
             </p>
           </div>
         </footer>
