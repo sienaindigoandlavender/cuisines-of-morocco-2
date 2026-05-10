@@ -5,6 +5,35 @@ export type RelatedEntry = {
   slug: string;
 };
 
+/**
+ * Glossary categories — flavors, forms, occasions. An entry can carry several.
+ * Used to group dishes/ingredients/techniques into the /glossary tag clouds.
+ */
+export type FlavorCategory = "sweet" | "savory" | "sour" | "bitter" | "umami" | "salty";
+export type FormCategory =
+  | "pastry"
+  | "bread"
+  | "soup"
+  | "stew"
+  | "salad"
+  | "drink"
+  | "snack"
+  | "condiment"
+  | "preserve"
+  | "spice-blend"
+  | "fat";
+export type OccasionCategory =
+  | "everyday"
+  | "ramadan"
+  | "celebration"
+  | "breakfast"
+  | "tea-time"
+  | "friday"
+  | "postpartum"
+  | "winter";
+
+export type GlossaryCategory = FlavorCategory | FormCategory | OccasionCategory;
+
 export type CrossDomainLinks = {
   amazighDictionarySlug?: string;
   derbSlug?: string;
@@ -42,6 +71,7 @@ export type Dish = BaseEntry & {
   lineage_layer?: string;
   regional_variations?: string;
   zfriti_skus?: string[];
+  categories?: GlossaryCategory[];
 };
 
 export type IngredientGrade = {
@@ -56,6 +86,7 @@ export type Ingredient = BaseEntry & {
   region_origin?: string;
   grades?: IngredientGrade[];
   used_in: string[];
+  categories?: GlossaryCategory[];
 };
 
 export type Region = BaseEntry & {
@@ -82,6 +113,61 @@ export type Technique = BaseEntry & {
   definition: string;
   method_block: string[];
   dishes_using_it: string[];
+  categories?: GlossaryCategory[];
 };
 
 export type AnyEntry = Dish | Ingredient | Region | Lineage | Technique;
+
+/**
+ * A glossary term — a vocabulary entry that doesn't (yet) have a full
+ * dish/ingredient/region page. Pure definition, optionally cross-linked.
+ */
+export type GlossaryTerm = {
+  slug: string;
+  term: string;
+  term_darija?: string;
+  term_tamazight?: string;
+  term_arabic?: string;
+  /** A short definition. */
+  definition: string;
+  /** Categories this term belongs to. */
+  categories: GlossaryCategory[];
+  /** Optional cross-links into the wiki proper. */
+  related_entries?: RelatedEntry[];
+};
+
+/**
+ * Origin geography for a produce item — a single source area in Morocco.
+ */
+export type ProduceOrigin = {
+  region_name: string;
+  lat: number;
+  lng: number;
+  notes?: string;
+};
+
+export type ProduceKind =
+  | "meat"
+  | "seafood"
+  | "fruit"
+  | "vegetable"
+  | "grain"
+  | "spice"
+  | "tree-fruit"
+  | "dairy"
+  | "fat"
+  | "preserve";
+
+/**
+ * A produce / raw-material entry. Where a thing comes from in Morocco.
+ * Optionally references an existing ingredient entry.
+ */
+export type Produce = {
+  slug: string;
+  name: string;
+  kind: ProduceKind;
+  blurb: string;
+  origins: ProduceOrigin[];
+  /** If this produce has a corresponding ingredient page in the wiki. */
+  ingredient_slug?: string;
+};

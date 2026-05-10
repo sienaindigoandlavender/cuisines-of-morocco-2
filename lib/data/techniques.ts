@@ -19,6 +19,7 @@ export const techniques: Technique[] = [
     dishes_using_it: ["rfissa"],
     published: true,
     illustration_filename: "warqa.svg",
+    categories: ["pastry"],
     related_entries: [
       { type: "dish", slug: "rfissa" },
       { type: "region", slug: "fez" },
@@ -43,6 +44,7 @@ export const techniques: Technique[] = [
     dishes_using_it: ["bissara", "khlii"],
     published: true,
     illustration_filename: "charmoula.svg",
+    categories: ["savory", "condiment"],
     related_entries: [
       { type: "dish", slug: "bissara" },
       { type: "dish", slug: "khlii" },
@@ -69,6 +71,7 @@ export const techniques: Technique[] = [
     dishes_using_it: ["tangia", "harira"],
     published: true,
     illustration_filename: "preserving-lemons.svg",
+    categories: ["sour", "salty", "preserve"],
     related_entries: [
       { type: "ingredient", slug: "preserved-lemon" },
       { type: "dish", slug: "tangia" },

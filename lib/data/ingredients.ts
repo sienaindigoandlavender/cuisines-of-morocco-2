@@ -15,6 +15,7 @@ export const ingredients: Ingredient[] = [
     used_in: ["meskouta"],
     published: true,
     illustration_filename: "orange.svg",
+    categories: ["sweet", "sour"],
     related_entries: [
       { type: "dish", slug: "meskouta" },
       { type: "region", slug: "berkane" },
@@ -38,6 +39,7 @@ export const ingredients: Ingredient[] = [
     used_in: ["rfissa", "sellou", "couscous-tfaya", "tangia", "khlii", "baghrir"],
     published: true,
     illustration_filename: "smen.svg",
+    categories: ["umami", "salty", "savory", "fat", "preserve", "condiment"],
     related_entries: [
       { type: "dish", slug: "rfissa" },
       { type: "dish", slug: "couscous-tfaya" },
@@ -58,6 +60,7 @@ export const ingredients: Ingredient[] = [
     used_in: ["rfissa", "harira", "couscous-tfaya", "khlii"],
     published: true,
     illustration_filename: "ras-el-hanout.svg",
+    categories: ["savory", "spice-blend", "condiment"],
     related_entries: [
       { type: "dish", slug: "rfissa" },
       { type: "dish", slug: "harira" },
@@ -80,6 +83,7 @@ export const ingredients: Ingredient[] = [
     used_in: ["baghrir"],
     published: true,
     illustration_filename: "argan.svg",
+    categories: ["savory", "fat"],
     related_entries: [
       { type: "region", slug: "essaouira" },
       { type: "lineage", slug: "amazigh-kitchen" },
@@ -99,6 +103,7 @@ export const ingredients: Ingredient[] = [
     used_in: ["couscous-tfaya", "tangia"],
     published: true,
     illustration_filename: "saffron.svg",
+    categories: ["bitter", "savory", "spice-blend"],
     related_entries: [
       { type: "dish", slug: "couscous-tfaya" },
       { type: "dish", slug: "tangia" },
@@ -117,6 +122,7 @@ export const ingredients: Ingredient[] = [
     used_in: ["harira", "tangia"],
     published: true,
     illustration_filename: "preserved-lemon.svg",
+    categories: ["sour", "salty", "preserve", "condiment"],
     related_entries: [
       { type: "technique", slug: "preserving-lemons" },
       { type: "dish", slug: "tangia" },
@@ -137,6 +143,7 @@ export const ingredients: Ingredient[] = [
     used_in: ["meskouta", "sellou"],
     published: true,
     illustration_filename: "almond.svg",
+    categories: ["sweet", "savory"],
     related_entries: [
       { type: "dish", slug: "sellou" },
       { type: "dish", slug: "meskouta" },
@@ -157,6 +164,7 @@ export const ingredients: Ingredient[] = [
     used_in: ["meskouta", "bissara"],
     published: true,
     illustration_filename: "olive-oil.svg",
+    categories: ["bitter", "savory", "fat"],
     related_entries: [
       { type: "dish", slug: "bissara" },
       { type: "dish", slug: "meskouta" },
