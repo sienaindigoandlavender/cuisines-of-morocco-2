@@ -5,6 +5,7 @@ import { entryHref, getDish, getLineage, getPublishedLineages, getRegion } from 
 import { EntryHeader } from "@/components/EntryHeader";
 import { CrossLinkFooter } from "@/components/CrossLinkFooter";
 import { CrossDomainBlock } from "@/components/CrossDomainLinks";
+import { NeighborhoodCloud } from "@/components/NeighborhoodCloud";
 import { JsonLd, articleJsonLd } from "@/lib/seo/structured-data";
 
 type Params = { slug: string };
@@ -72,6 +73,7 @@ export default async function LineagePage({ params }: { params: Promise<Params> 
         <p>{l.narrative}</p>
       </section>
 
+      <NeighborhoodCloud refs={l.related_entries} title="Neighbourhood" />
       <CrossDomainBlock links={l.cross_domain} />
       <CrossLinkFooter refs={l.related_entries} />
     </article>

@@ -18,11 +18,13 @@ enforced (where they can be) by the content validator in `scripts/validate-conte
    polished into anonymity. We write plainly about plain food and ornate
    food in the same register.
 
-4. **No food photography. Ever.** The visual system is botanical line
-   drawings (for dishes, ingredients, lineages, techniques). Region pages
-   use a Mapbox map when `NEXT_PUBLIC_MAPBOX_TOKEN` is set; otherwise a
-   hand-drawn SVG placeholder. Photography is for other sites in the
-   ecosystem.
+4. **V1 is wiki-structured.** The site opens as a wiki: every entry is
+   text-led, every page carries a weighted tag cloud, the graph itself is
+   the primary visual. Botanical illustrations and photographs come later,
+   woven into entries one by one once the corpus is solid. For now
+   `BotanicalIllustration` and `RegionMap` exist as components but are
+   only rendered when explicitly turned on (the region pages use Mapbox
+   when `NEXT_PUBLIC_MAPBOX_TOKEN` is set in env).
 
 5. **Paraphrase, don't quote. Link generously.** We do not lift recipes or
    prose verbatim from other writers. We absorb, paraphrase, attribute when

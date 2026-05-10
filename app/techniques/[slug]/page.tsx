@@ -5,6 +5,7 @@ import { entryHref, getDish, getPublishedTechniques, getTechnique } from "@/lib/
 import { EntryHeader } from "@/components/EntryHeader";
 import { CrossLinkFooter } from "@/components/CrossLinkFooter";
 import { CrossDomainBlock } from "@/components/CrossDomainLinks";
+import { NeighborhoodCloud } from "@/components/NeighborhoodCloud";
 
 type Params = { slug: string };
 
@@ -65,6 +66,7 @@ export default async function TechniquePage({ params }: { params: Promise<Params
 
       <hr className="threshold" aria-hidden />
 
+      <NeighborhoodCloud refs={t.related_entries} title="Neighbourhood" />
       <CrossDomainBlock links={t.cross_domain} />
       <CrossLinkFooter refs={t.related_entries} />
     </article>

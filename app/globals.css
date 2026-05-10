@@ -116,6 +116,11 @@ main {
     align-items: start;
   }
 }
+.entry-header--text {
+  display: block;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.25rem;
+}
 .entry-header__kind {
   font-family: var(--sans);
   font-size: 0.78rem;
@@ -481,4 +486,84 @@ main {
 .ecosystem-foot a {
   color: var(--ink-soft);
   margin: 0 0.5rem;
+}
+
+/* Tag cloud */
+.tag-cloud {
+  margin: 2rem 0;
+}
+.tag-cloud__title {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  margin: 0 0 0.6rem;
+}
+.tag-cloud__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.9rem;
+  line-height: 1.35;
+}
+.tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-family: var(--display);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.05rem 0.15rem;
+  border-bottom: 1px dotted transparent;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.tag:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent-soft);
+}
+.tag__kind {
+  font-family: var(--sans);
+  font-size: 0.58em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-right: 0.15rem;
+}
+.tag__weight {
+  font-family: var(--sans);
+  font-size: 0.55em;
+  color: var(--ink-soft);
+  margin-left: 0.05rem;
+}
+.tag--dish .tag__name {
+  border-bottom: 1px solid rgba(138, 58, 31, 0.35);
+}
+.tag--ingredient .tag__name {
+  border-bottom: 1px dotted rgba(74, 92, 58, 0.5);
+}
+.tag--region .tag__name {
+  border-bottom: 1px dashed rgba(58, 74, 122, 0.45);
+}
+.tag--lineage .tag__name {
+  font-style: italic;
+  border-bottom: 1px solid rgba(120, 90, 60, 0.4);
+}
+.tag--technique .tag__name {
+  border-bottom: 1px solid rgba(120, 120, 120, 0.4);
+}
+
+/* Cloud legend */
+.cloud-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin: 0.6rem 0 1rem;
+}
+.cloud-legend span {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
