@@ -201,23 +201,52 @@ export const dishes: Dish[] = [
     name: "Tangia",
     name_darija: "Tangia",
     name_arabic: "طنجية",
-    one_line_placement: "The bachelor's pot, buried in the ashes of the hammam furnace.",
+    one_line_placement: "The lazy man's tagine (Marrakech).",
     published: true,
     illustration_filename: "tangia.svg",
     categories: ["savory", "umami", "sour", "stew", "celebration"],
     recipe_block: {
-      ingredients: [],
-      method: [],
+      servings: "1 urn / 2 portions",
+      cook_time: "6–7 hours, unattended",
+      ingredients: [
+        "Beef or lamb shank, on the bone",
+        "Preserved lemon",
+        "Garlic",
+        "Cumin",
+        "Smen",
+        "Saffron",
+        "Ras el hanout",
+        "Bread, cumin, and salt — to serve",
+      ],
+      method: [
+        "Combine in the urn: meat, preserved lemon, garlic, cumin, smen, saffron, ras el hanout. Some cooks add a splash of water; the purists don't. The meat releases enough.",
+        "Seal the mouth of the urn with paper, tied down with string.",
+        "Hand it to the farnatchi at the hammam with a few dirhams. He drops it into the ash and goes about his day.",
+        "Collect after six or seven hours. The meat falls off the bone. Eat with bread, cumin, and salt.",
+      ],
+      notes: [
+        "Tangia is the lazy man's tagine. That's what the cooks call it, not what we're calling it. A narrow-necked clay urn, sealed with paper, dropped into the ash under the hammam furnace for six or seven hours while no one tends it. That's the entire point. The hammam attendant gets a few dirhams; the meat falls off the bone.",
+        "Where to eat it in Marrakech: Mechoui Alley (Souk Ablouh, just off Jemaa el-Fna) around lunch. Ready-made tangias come out from one o'clock. Get there before one or don't bother — they sell what they sell. Around 80–120 MAD a portion in 2026, served with bread, cumin, salt.",
+        "How to order it: point. Ask for nuss (half) if you're eating alone. They'll split one urn between two if you ask.",
+      ],
     },
+    memory_layer:
+      "The dish is bachelor food. The story goes that working men in old Marrakech — porters, bath-house attendants, men without kitchens — would assemble a tangia in the morning, hand it to the farnatchi (the hammam stoker), and collect it cooked at the end of the day. The fee was nominal. The labour was none.",
+    lineage_layer:
+      "Tangia is not tagine. The tagine is a vessel and a cooking style — the conical lid, the slow simmer on the stove. The tangia is a vessel and an abandonment — sealed, buried in ash, ignored for hours. The tagine is a wife's dish. The tangia is a single man's. The vocabulary is local, and it has not aged out.",
+    regional_variations:
+      "Fez does not eat tangia. Casablanca does not. This is a Marrakech dish, made possible by the city's old hammam economy — every neighbourhood with a furnace, every furnace with hours of waste heat. Restaurants outside Marrakech that serve \"tangia\" are usually serving a slow-braised shank in a tangia-shaped pot. The ash matters. Without it, it is a stew.",
     related_entries: [
       { type: "ingredient", slug: "preserved-lemon" },
       { type: "ingredient", slug: "smen" },
+      { type: "ingredient", slug: "ras-el-hanout" },
       { type: "ingredient", slug: "saffron" },
       { type: "region", slug: "marrakech" },
       { type: "technique", slug: "preserving-lemons" },
     ],
     cross_domain: {
       derbSlug: "where-to-eat-tangia-in-marrakech",
+      slowMoroccoSlug: "mechoui-alley-marrakech",
     },
   },
   {
