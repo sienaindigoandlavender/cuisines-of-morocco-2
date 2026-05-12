@@ -10,7 +10,7 @@ This is a Next.js site documenting Moroccan cuisine, entry by entry — dishes, 
 - **Acton structure.** Utility above the threshold, memory below. The reader scanning for a recipe never has to wade through history to reach a quantity.
 - **The wince test.** Would a Marrakech cook read this and nod, or wince? If wince, rewrite.
 
-The full trap list, worked example, per-field rules, and operational sections all live in `docs/editorial.md`. Open that file first.
+The full trap list, worked example (`/dishes/tangia` is the canonical pattern), per-field rules, and operational sections all live in `docs/editorial.md`. Open that file first.
 
 ## Schema and validation
 
@@ -24,4 +24,4 @@ Four optional slugs on each entry: `amazighDictionarySlug`, `derbSlug`, `zfritiS
 
 ## Branch convention
 
-All content development happens on the branch the user names — never push to `main` without explicit instruction.
+Develop on branches named `claude/<topic>-<short-id>` — e.g. `claude/review-writing-guidelines-OFI4t`, `claude/add-meskouta-memory-AbC2x`. Matches what Claude Code already uses by default, and the convention across the ecosystem. Do not drift to `feature/`, `fix/`, or any other prefix. Never push to `main` without explicit instruction.

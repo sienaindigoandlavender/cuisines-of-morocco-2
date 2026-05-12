@@ -1,9 +1,9 @@
 # Editorial guardrails — Cuisines of Morocco
 
 This document is the voice contract for every entry on the site. If you are
-adding or editing content, read it first. The principles below sit on top of
-the operational rules at the bottom of this document, which the validator in
-`scripts/validate-content.ts` enforces on `prebuild`.
+adding or editing content, read it first. The voice section above the line is
+the source of truth for how to write. The operational section below it is the
+source of truth for how the build runs.
 
 ---
 
@@ -84,6 +84,8 @@ Bourdain's insider authority depends on first person. The wiki can't use first p
 
 ## Worked example — Tangia entry, full structure
 
+This is the canonical pattern. The live page at `/dishes/tangia` is built from this prose; subsequent entries pattern-match against the live page, not the doc.
+
 **Slug:** `tangia`
 **Type:** dish
 
@@ -113,7 +115,7 @@ Bourdain's insider authority depends on first person. The wiki can't use first p
 ### Footer (cross-links, related entries, see-also)
 
 - Ingredient links: preserved lemon, smen, ras el hanout, saffron
-- Technique links: hammam-furnace cooking, sealing with paper
+- Technique links: preserving lemons (hammam-furnace cooking, sealing with paper — candidate technique pages)
 - Region link: Marrakech
 - Cross-domain: SlowMoroccoLink (the Mechoui Alley journey), DerbLink (the souk it's in)
 
@@ -130,6 +132,13 @@ Bourdain's insider authority depends on first person. The wiki can't use first p
 
 ---
 
+## A few more editorial principles
+
+- **Ugly-delicious frame.** Plain food and ornate food sit in the same register. No styling. No polishing into anonymity.
+- **Paraphrase, don't quote.** No verbatim lifts from other writers — recipes or prose. Absorb, attribute when it matters, link out to the broader ecosystem (Slow Morocco, About The Amazigh, Derb.so, Zfriti).
+
+---
+
 ## When in doubt
 
 Ask: would a Marrakech cook read this and nod, or wince?
@@ -140,34 +149,11 @@ If wince, rewrite.
 
 ## Operational rules
 
-The sections below are the operational and validation rules. They sit beneath the voice contract above and govern what the build will allow through.
+The sections below govern how the build runs. They are not about how to write.
 
-### The five rules
+### V1 scope
 
-1. **Memory-led.** Every entry begins with a recipe or a definition, then
-   passes the threshold and turns to memory. The memory layer is where the
-   dish lives — who makes it, when, for whom, and what it means.
-
-2. **Recipe-first structure.** Utility above the fold; rabbit-hole below.
-   A reader who wants to cook should be cooking inside thirty seconds. A
-   reader who wants to wander should be able to wander for an hour.
-
-3. **Ugly-delicious frame.** The food is not styled. The voice is not
-   polished into anonymity. We write plainly about plain food and ornate
-   food in the same register.
-
-4. **V1 is wiki-structured.** The site opens as a wiki: every entry is
-   text-led, every page carries a weighted tag cloud, the graph itself is
-   the primary visual. Botanical illustrations and photographs come later,
-   woven into entries one by one once the corpus is solid. For now
-   `BotanicalIllustration` and `RegionMap` exist as components but are
-   only rendered when explicitly turned on (the region pages use Mapbox
-   when `NEXT_PUBLIC_MAPBOX_TOKEN` is set in env).
-
-5. **Paraphrase, don't quote. Link generously.** We do not lift recipes or
-   prose verbatim from other writers. We absorb, paraphrase, attribute when
-   it matters, and link out to the broader ecosystem (Slow Morocco, About
-   The Amazigh, Derb.so, Zfriti) wherever a connection exists.
+The site opens as a text-led wiki: every entry text-first, weighted tag clouds on each page, the graph itself as the primary visual. Botanical illustrations and photographs come later, woven in entry by entry once the corpus is solid. The `BotanicalIllustration` and `RegionMap` components exist but render only when explicitly turned on (region pages use Mapbox when `NEXT_PUBLIC_MAPBOX_TOKEN` is set in env).
 
 ### Entry structure (schematic)
 
