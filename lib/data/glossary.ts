@@ -13,7 +13,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term_tamazight: "Tajin",
     term_arabic: "طاجين",
     definition:
-      "Both the conical-lidded earthenware vessel and the slow-cooked stew that emerges from it. The lid traps steam, drips it back down, and lets a small amount of liquid stretch over hours.",
+      "Both the conical-lidded earthenware vessel and the stew that comes out of it. The lid traps steam, drips it back down, and stretches a small amount of liquid over hours.",
     categories: ["stew", "savory"],
     related_entries: [
       { type: "dish", slug: "tangia" },
@@ -81,7 +81,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term_darija: "Khoubz",
     term_arabic: "خبز",
     definition:
-      "Everyday bread — round, flat, slightly thicker at the rim. Baked in the neighbourhood farran (communal oven) or at home. The utensil and the staple.",
+      "Everyday bread — round, flat, slightly thicker at the rim. Baked in the neighbourhood farran or at home. Used as a utensil as much as a food: a torn piece of khoubz is how you scoop a tagine.",
     categories: ["bread", "everyday"],
   },
   {
@@ -90,7 +90,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term_darija: "B'stilla",
     term_arabic: "بسطيلة",
     definition:
-      "The ceremonial pie — pigeon (or chicken) layered with eggs, almonds, cinnamon, and sugar between sheets of warqa, baked, and dusted with icing sugar. Sweet and savoury at once.",
+      "The ceremonial pie — pigeon (or chicken) layered with eggs, almonds, cinnamon, and sugar between sheets of warqa, baked, and dusted with icing sugar. Sweet and savoury in the same bite.",
     categories: ["sweet", "savory", "pastry", "celebration"],
     related_entries: [
       { type: "technique", slug: "warqa" },
@@ -153,7 +153,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term_tamazight: "Atay",
     term_arabic: "أتاي",
     definition:
-      "Mint tea — green tea (gunpowder), fresh spearmint, plenty of sugar — poured high to froth in the glass. The unbroken thread of Moroccan hospitality from morning through midnight.",
+      "Mint tea — green tea (gunpowder), fresh spearmint, plenty of sugar — poured from a height to froth the glass. Refilled until you cover the glass with your hand to refuse.",
     categories: ["sweet", "drink", "tea-time", "everyday"],
   },
   {
@@ -193,7 +193,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term_darija: "Souk",
     term_arabic: "سوق",
     definition:
-      "The market — daily, weekly, or seasonal. Where the spice merchant builds his ras el hanout, where the fishmonger lays out the morning's catch, where a recipe begins.",
+      "The market — daily, weekly, or seasonal. Where the spice merchant builds his ras el hanout, where the fishmonger lays out the morning's catch.",
     categories: ["everyday"],
   },
   {
@@ -228,7 +228,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Gsaa",
     term_arabic: "قصعة",
     definition:
-      "The wide, low wooden bowl used for kneading bread, working couscous, and serving the latter at table. The vessel that defines the gesture.",
+      "The wide, low wooden bowl used for kneading bread, working couscous, and serving the latter at table. Often carved from a single block of walnut or olive wood, and handed down.",
     categories: ["bread", "everyday"],
   },
 
@@ -257,7 +257,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Zaalouk",
     term_arabic: "زعلوك",
     definition:
-      "Charred aubergine and tomato, cooked down with garlic, cumin, and paprika until almost a paste. Eaten cold with bread. The summer salad that pretends to be a stew.",
+      "Charred aubergine and tomato, cooked down with garlic, cumin, and paprika until almost a paste. Eaten cold with bread.",
     categories: ["savory", "salad", "condiment"],
   },
   {
@@ -273,7 +273,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Mrouzia",
     term_arabic: "مروزية",
     definition:
-      "Lamb cooked down in honey, raisins, and ras el hanout until glossy and black. The Eid tagine — often made from the slaughter sheep's leftover meat, which is the kind of thrift that becomes a feast.",
+      "Lamb cooked down in honey, raisins, and ras el hanout until glossy and black. The Eid tagine — often made from the slaughter sheep's leftover meat.",
     categories: ["sweet", "savory", "stew", "celebration"],
     related_entries: [
       { type: "ingredient", slug: "ras-el-hanout" },
@@ -295,7 +295,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Mahjouba",
     term_darija: "Mahjouba",
     definition:
-      "A folded semolina flatbread, stuffed with onion and tomato, griddled on the spot. Five dirhams from a man with a hot plate and a folding stool — the food of the train station, the bus, the long wait.",
+      "A folded semolina flatbread, stuffed with onion and tomato, griddled on the spot. Five dirhams from a man with a hot plate and a folding stool — bus-station food, train-station food.",
     categories: ["bread", "snack", "everyday"],
   },
   {
@@ -311,7 +311,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Kefta",
     term_arabic: "كفتة",
     definition:
-      "Spiced minced meat, lamb or beef. Skewered for the grill, rolled into balls for the tagine, cracked into eggs for the kefta tajine. The most forgiving meat in the kitchen.",
+      "Spiced minced meat, lamb or beef. Skewered for the grill, rolled into balls for the tagine, cracked into eggs for the kefta tajine.",
     categories: ["savory", "umami", "everyday"],
   },
   {
@@ -331,7 +331,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Krachel",
     term_arabic: "كراشل",
     definition:
-      "Soft sesame-and-anise rolls, sweet and tender. Eaten with tea, or with a triangle of Vache qui Rit smashed into the middle. The triangle is wrong. Moroccan children disagree.",
+      "Sesame-and-anise rolls, faintly sweet. Eaten with tea, or with a triangle of Vache qui Rit smashed into the middle. The triangle is wrong. Moroccan children disagree.",
     categories: ["sweet", "bread", "tea-time", "breakfast"],
   },
   {
@@ -339,7 +339,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Fakia",
     term_arabic: "فاكية",
     definition:
-      "Literally 'fruit'. The bowl of dates, figs, almonds, and walnuts that opens an iftar before the harira — the pause between the call to prayer and the first spoon.",
+      "Literally 'fruit'. The bowl of dates, figs, almonds, and walnuts that opens an iftar before the harira.",
     categories: ["sweet", "snack", "ramadan"],
     related_entries: [
       { type: "dish", slug: "harira" },
@@ -351,7 +351,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Trid",
     term_arabic: "تريد",
     definition:
-      "Torn sheets of paper-thin pastry layered with chicken, lentils, and broth. Said to be the Prophet's favourite dish; the rural ancestor of rfissa.",
+      "Torn sheets of paper-thin pastry layered with chicken, lentils, and broth. Said in Morocco to be the Prophet's favourite dish; the rural ancestor of rfissa.",
     categories: ["savory", "umami", "stew", "celebration"],
     related_entries: [
       { type: "dish", slug: "rfissa" },
@@ -374,7 +374,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Znoud el Sit",
     term_arabic: "زنود الست",
     definition:
-      "'The lady's arms'. Cigars of warqa filled with milk-and-almond cream, fried, soaked in syrup. A Levantine traveller naturalised by the Fassi pastry table.",
+      "'The lady's arms'. Cigars of warqa filled with milk-and-almond cream, fried, soaked in syrup. Levantine in origin, naturalised in the Fassi kitchen.",
     categories: ["sweet", "pastry", "celebration", "tea-time"],
     related_entries: [
       { type: "technique", slug: "warqa" },
@@ -386,7 +386,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Tagine bel Barkouk",
     term_arabic: "طاجين بالبرقوق",
     definition:
-      "Lamb with prunes, almonds, sesame, and cinnamon. Sweet, dark, and slow — the wedding tagine of Fez.",
+      "Lamb with prunes, almonds, sesame, and cinnamon. The wedding tagine of Fez.",
     categories: ["sweet", "savory", "stew", "celebration"],
     related_entries: [
       { type: "ingredient", slug: "almond" },
@@ -415,7 +415,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Merguez",
     term_arabic: "مرقاز",
     definition:
-      "Spiced lamb sausage — paprika, cumin, harissa-bright. Coiled on the grill at the souk, slid into a sandwich, set beside the eggs at breakfast.",
+      "Spiced lamb sausage — paprika, cumin, harissa. Coiled on the grill at the souk, slid into a sandwich, set beside the eggs at breakfast.",
     categories: ["savory", "umami", "snack"],
   },
 
@@ -435,7 +435,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Siniya",
     term_arabic: "صينية",
     definition:
-      "The engraved brass tea tray. The teapot, the glasses, the sugar cone, the box of mint — all live on the siniya. To carry it out is to declare a pause in the day.",
+      "The engraved brass tea tray. The teapot, the glasses, the sugar cone, the box of mint — all live on the siniya. When it comes out of the kitchen, work stops.",
     categories: ["tea-time", "everyday"],
   },
   {
@@ -443,7 +443,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Kanoun",
     term_arabic: "كانون",
     definition:
-      "The charcoal brazier. A clay or metal bowl holding embers — for the kettle, for the tagine, for the warmth on a winter morning.",
+      "The charcoal brazier. A clay or metal bowl holding embers — used for the kettle, the tagine, and the room itself on a winter morning.",
     categories: ["everyday", "winter"],
   },
   {
@@ -464,7 +464,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Mehraz",
     term_arabic: "مهراز",
     definition:
-      "The brass mortar and pestle. Heavy, ringing, ancestral. Where garlic is crushed and spice is bruised. The sound of it carrying through the medina is half the morning.",
+      "The brass mortar and pestle. Heavy and ringing. Where garlic is crushed and spice is bruised. The sound of it carrying through the medina is half the morning.",
     categories: ["everyday", "spice-blend"],
   },
 
@@ -543,7 +543,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "S'hour",
     term_arabic: "سحور",
     definition:
-      "The pre-dawn meal of Ramadan, eaten before the day's fast begins. Filling, oily, slow-burning — eggs, msemen, smen, dates, the night-before's leftovers.",
+      "The pre-dawn meal of Ramadan, eaten before the day's fast begins. Eggs, msemen, smen, dates, the night-before's leftovers — slow-burning food, for a fasting day.",
     categories: ["ramadan", "breakfast"],
     related_entries: [
       { type: "ingredient", slug: "smen" },
@@ -574,7 +574,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Diffa",
     term_arabic: "ضيافة",
     definition:
-      "The formal feast. Long, layered, ceremonial — bastilla, two or three tagines, couscous, fruit, sweets, tea. What weddings, name-days, and important guests demand.",
+      "The formal feast. The order runs: bastilla, two or three tagines, couscous, fruit, sweets, tea. What weddings, name-days, and important guests demand.",
     categories: ["celebration"],
   },
   {
