@@ -231,4 +231,362 @@ export const glossaryTerms: GlossaryTerm[] = [
       "The wide, low wooden bowl used for kneading bread, working couscous, and serving the latter at table. The vessel that defines the gesture.",
     categories: ["bread", "everyday"],
   },
+
+  // — Dishes & preparations without their own page —
+
+  {
+    slug: "sfenj",
+    term: "Sfenj",
+    term_darija: "Sfenj",
+    term_arabic: "سفنج",
+    definition:
+      "The doughnut without sugar. Yeasted, fried in deep oil, threaded onto a length of palm fibre and carried home swinging. Dipped in honey, or in strong tea.",
+    categories: ["bread", "snack", "breakfast", "friday"],
+  },
+  {
+    slug: "meloui",
+    term: "Meloui",
+    term_darija: "Meloui",
+    term_arabic: "ملوي",
+    definition:
+      "Msemen's thinner sibling — a long ribbon of oiled dough wound into a flat spiral and pan-fried. Crisper, more shattering, less foldable.",
+    categories: ["bread", "breakfast"],
+  },
+  {
+    slug: "zaalouk",
+    term: "Zaalouk",
+    term_arabic: "زعلوك",
+    definition:
+      "Charred aubergine and tomato, cooked down with garlic, cumin, and paprika until almost a paste. Eaten cold with bread. The summer salad that pretends to be a stew.",
+    categories: ["savory", "salad", "condiment"],
+  },
+  {
+    slug: "taktouka",
+    term: "Taktouka",
+    term_arabic: "تكتوكة",
+    definition:
+      "The pepper cousin to zaalouk. Green pepper and tomato, smoke from the grill, lemon at the end. Served cold, lifted with bread.",
+    categories: ["savory", "salad", "condiment"],
+  },
+  {
+    slug: "mrouzia",
+    term: "Mrouzia",
+    term_arabic: "مروزية",
+    definition:
+      "Lamb cooked down in honey, raisins, and ras el hanout until glossy and black. The Eid tagine — often made from the slaughter sheep's leftover meat, which is the kind of thrift that becomes a feast.",
+    categories: ["sweet", "savory", "stew", "celebration"],
+    related_entries: [
+      { type: "ingredient", slug: "ras-el-hanout" },
+    ],
+  },
+  {
+    slug: "seffa",
+    term: "Seffa",
+    term_arabic: "سفة",
+    definition:
+      "Steamed couscous or vermicelli mounted into a sweet pyramid, dusted with cinnamon and sugar, scattered with toasted almonds. The last savoury course or the first sweet, depending on the host.",
+    categories: ["sweet", "celebration", "tea-time"],
+    related_entries: [
+      { type: "ingredient", slug: "almond" },
+    ],
+  },
+  {
+    slug: "mahjouba",
+    term: "Mahjouba",
+    term_darija: "Mahjouba",
+    definition:
+      "A folded semolina flatbread, stuffed with onion and tomato, griddled on the spot. Five dirhams from a man with a hot plate and a folding stool — the food of the train station, the bus, the long wait.",
+    categories: ["bread", "snack", "everyday"],
+  },
+  {
+    slug: "batbout",
+    term: "Batbout",
+    term_arabic: "بطبوط",
+    definition:
+      "A small, puffed flatbread, pita-shaped, cooked on a dry pan. Splits open to take cheese, kefta, anything.",
+    categories: ["bread", "everyday", "snack"],
+  },
+  {
+    slug: "kefta",
+    term: "Kefta",
+    term_arabic: "كفتة",
+    definition:
+      "Spiced minced meat, lamb or beef. Skewered for the grill, rolled into balls for the tagine, cracked into eggs for the kefta tajine. The most forgiving meat in the kitchen.",
+    categories: ["savory", "umami", "everyday"],
+  },
+  {
+    slug: "mhencha",
+    term: "M'hencha",
+    term_arabic: "المحنشة",
+    definition:
+      "The 'snake'. A long coil of warqa wrapped around almond paste, baked into a flat spiral, dusted with cinnamon and powdered sugar.",
+    categories: ["sweet", "pastry", "tea-time", "celebration"],
+    related_entries: [
+      { type: "technique", slug: "warqa" },
+      { type: "ingredient", slug: "almond" },
+    ],
+  },
+  {
+    slug: "krachel",
+    term: "Krachel",
+    term_arabic: "كراشل",
+    definition:
+      "Soft sesame-and-anise rolls, sweet and tender. Eaten with tea, or with a triangle of Vache qui Rit smashed into the middle. The triangle is wrong. Moroccan children disagree.",
+    categories: ["sweet", "bread", "tea-time", "breakfast"],
+  },
+  {
+    slug: "fakia",
+    term: "Fakia",
+    term_arabic: "فاكية",
+    definition:
+      "Literally 'fruit'. The bowl of dates, figs, almonds, and walnuts that opens an iftar before the harira — the pause between the call to prayer and the first spoon.",
+    categories: ["sweet", "snack", "ramadan"],
+    related_entries: [
+      { type: "dish", slug: "harira" },
+      { type: "ingredient", slug: "almond" },
+    ],
+  },
+  {
+    slug: "trid",
+    term: "Trid",
+    term_arabic: "تريد",
+    definition:
+      "Torn sheets of paper-thin pastry layered with chicken, lentils, and broth. Said to be the Prophet's favourite dish; the rural ancestor of rfissa.",
+    categories: ["savory", "umami", "stew", "celebration"],
+    related_entries: [
+      { type: "dish", slug: "rfissa" },
+      { type: "technique", slug: "warqa" },
+    ],
+  },
+  {
+    slug: "fekkas",
+    term: "Fekkas",
+    term_arabic: "فقاص",
+    definition:
+      "Twice-baked Moroccan biscuits — a loaf is baked, sliced, baked again. Studded with almonds, raisins, anise, or sesame. Keeps in a tin until next month.",
+    categories: ["sweet", "pastry", "tea-time"],
+    related_entries: [
+      { type: "ingredient", slug: "almond" },
+    ],
+  },
+  {
+    slug: "znoud-el-sit",
+    term: "Znoud el Sit",
+    term_arabic: "زنود الست",
+    definition:
+      "'The lady's arms'. Cigars of warqa filled with milk-and-almond cream, fried, soaked in syrup. A Levantine traveller naturalised by the Fassi pastry table.",
+    categories: ["sweet", "pastry", "celebration", "tea-time"],
+    related_entries: [
+      { type: "technique", slug: "warqa" },
+      { type: "ingredient", slug: "almond" },
+    ],
+  },
+  {
+    slug: "tagine-bel-barkouk",
+    term: "Tagine bel Barkouk",
+    term_arabic: "طاجين بالبرقوق",
+    definition:
+      "Lamb with prunes, almonds, sesame, and cinnamon. Sweet, dark, and slow — the wedding tagine of Fez.",
+    categories: ["sweet", "savory", "stew", "celebration"],
+    related_entries: [
+      { type: "ingredient", slug: "almond" },
+      { type: "region", slug: "fez" },
+      { type: "lineage", slug: "andalusi-cuisine" },
+    ],
+  },
+  {
+    slug: "sahlab",
+    term: "Sahlab",
+    term_arabic: "سحلب",
+    definition:
+      "The winter milk drink — orchid-root starch thickened with milk and sugar, cinnamon and crushed nut on top. Drunk on cold nights, particularly in the north.",
+    categories: ["sweet", "drink", "winter"],
+  },
+  {
+    slug: "halwa",
+    term: "Halwa",
+    term_arabic: "حلوى",
+    definition:
+      "The umbrella for all Moroccan sweets — biscuits, fried pastry, pulled sugar, almond confection. The plate in the centre of the tea tray.",
+    categories: ["sweet", "tea-time", "celebration"],
+  },
+  {
+    slug: "merguez",
+    term: "Merguez",
+    term_arabic: "مرقاز",
+    definition:
+      "Spiced lamb sausage — paprika, cumin, harissa-bright. Coiled on the grill at the souk, slid into a sandwich, set beside the eggs at breakfast.",
+    categories: ["savory", "umami", "snack"],
+  },
+
+  // — Kitchen objects & the furniture of hospitality —
+
+  {
+    slug: "berred",
+    term: "Berred",
+    term_darija: "Berred",
+    term_arabic: "براد",
+    definition:
+      "The teapot. Silver, enamel, or — at the bottom of the price ladder — aluminium. The handle is long because the pour is long.",
+    categories: ["tea-time", "everyday"],
+  },
+  {
+    slug: "siniya",
+    term: "Siniya",
+    term_arabic: "صينية",
+    definition:
+      "The engraved brass tea tray. The teapot, the glasses, the sugar cone, the box of mint — all live on the siniya. To carry it out is to declare a pause in the day.",
+    categories: ["tea-time", "everyday"],
+  },
+  {
+    slug: "kanoun",
+    term: "Kanoun",
+    term_arabic: "كانون",
+    definition:
+      "The charcoal brazier. A clay or metal bowl holding embers — for the kettle, for the tagine, for the warmth on a winter morning.",
+    categories: ["everyday", "winter"],
+  },
+  {
+    slug: "kskas",
+    term: "Kskas",
+    term_darija: "Kskas",
+    term_tamazight: "Kskas",
+    term_arabic: "كسكاس",
+    definition:
+      "The couscoussier. A two-tier pot — a wide-bellied bottom for the broth and meat, a perforated top for the grain. The steam rises and the couscous swells.",
+    categories: ["everyday", "friday"],
+    related_entries: [
+      { type: "dish", slug: "couscous-tfaya" },
+    ],
+  },
+  {
+    slug: "mehraz",
+    term: "Mehraz",
+    term_arabic: "مهراز",
+    definition:
+      "The brass mortar and pestle. Heavy, ringing, ancestral. Where garlic is crushed and spice is bruised. The sound of it carrying through the medina is half the morning.",
+    categories: ["everyday", "spice-blend"],
+  },
+
+  // — Ingredients without their own page (yet) —
+
+  {
+    slug: "ma-zhar",
+    term: "Ma Zhar",
+    term_darija: "Ma Zhar",
+    term_arabic: "ماء الزهر",
+    definition:
+      "Orange-blossom water — the distillate of bitter-orange flowers from the Fes-Meknes plain. A drop in a glass of water at a wedding, a teaspoon in pastry, a sprinkle on the hands before tea.",
+    categories: ["sweet", "condiment"],
+    related_entries: [
+      { type: "ingredient", slug: "orange" },
+      { type: "lineage", slug: "andalusi-cuisine" },
+    ],
+  },
+  {
+    slug: "ma-ward",
+    term: "Ma Ward",
+    term_darija: "Ma Ward",
+    term_arabic: "ماء الورد",
+    definition:
+      "Rose water — distilled from the damask roses of the Dades valley. Used like ma zhar, but more floral, less citric. The Kelaat M'Gouna rose festival in May times the year.",
+    categories: ["sweet", "condiment"],
+  },
+  {
+    slug: "zebda",
+    term: "Zebda",
+    term_arabic: "زبدة",
+    definition:
+      "Fresh, unsalted butter — the young, sweet kin of smen. Whisked into bread dough, melted over baghrir, mounded into a small bowl beside the breakfast bread.",
+    categories: ["fat", "breakfast", "everyday"],
+    related_entries: [
+      { type: "ingredient", slug: "smen" },
+      { type: "dish", slug: "baghrir" },
+    ],
+  },
+  {
+    slug: "shiba",
+    term: "Shiba",
+    term_arabic: "شيبة",
+    definition:
+      "Wormwood (Artemisia absinthium). Added to mint tea in winter — a thread of bitter green, said to clean the blood. The smell is medicinal; the second glass is the one you want.",
+    categories: ["bitter", "drink", "tea-time", "winter"],
+  },
+  {
+    slug: "olives-beldi",
+    term: "Zitoun Beldi",
+    term_darija: "Zitoun Beldi",
+    term_arabic: "زيتون بلدي",
+    definition:
+      "Black, oil-cured, wrinkled. The country olive of the Moroccan table — bitter, salty, eaten with bread for breakfast or beside the harira. Beldi means 'of the country' — the opposite of roumi, which now means 'foreign' and originally meant 'Roman'.",
+    categories: ["bitter", "salty", "preserve", "breakfast"],
+    related_entries: [
+      { type: "ingredient", slug: "olive-oil" },
+    ],
+  },
+
+  // — Ritual meals and the calendar around them —
+
+  {
+    slug: "iftar",
+    term: "Iftar",
+    term_arabic: "إفطار",
+    definition:
+      "The sunset meal that breaks the Ramadan fast. The order is fixed: dates and milk first, then harira, then chebakia, then everything else. In Moroccan cities the midfa al iftar — the iftar cannon — still fires at sundown; ten minutes later the streets are empty and every household is at the table.",
+    categories: ["ramadan", "celebration"],
+    related_entries: [
+      { type: "dish", slug: "harira" },
+    ],
+  },
+  {
+    slug: "shour",
+    term: "S'hour",
+    term_arabic: "سحور",
+    definition:
+      "The pre-dawn meal of Ramadan, eaten before the day's fast begins. Filling, oily, slow-burning — eggs, msemen, smen, dates, the night-before's leftovers.",
+    categories: ["ramadan", "breakfast"],
+    related_entries: [
+      { type: "ingredient", slug: "smen" },
+    ],
+  },
+  {
+    slug: "sebaa",
+    term: "Sebaa",
+    term_arabic: "سبوع",
+    definition:
+      "The seventh-day naming feast for a newborn. Sellou and rfissa are made; an animal is slaughtered; the name is announced. Friends bring food to the mother for the seven days before.",
+    categories: ["celebration", "postpartum"],
+    related_entries: [
+      { type: "dish", slug: "sellou" },
+      { type: "dish", slug: "rfissa" },
+    ],
+  },
+  {
+    slug: "moussem",
+    term: "Moussem",
+    term_arabic: "موسم",
+    definition:
+      "A saint's-day festival. Music, horse riders firing rifles into the air, food cooked for thousands. The big moussems — Moulay Idriss, Imilchil, Sefrou — anchor the agricultural year.",
+    categories: ["celebration"],
+  },
+  {
+    slug: "diffa",
+    term: "Diffa",
+    term_arabic: "ضيافة",
+    definition:
+      "The formal feast. Long, layered, ceremonial — bastilla, two or three tagines, couscous, fruit, sweets, tea. What weddings, name-days, and important guests demand.",
+    categories: ["celebration"],
+  },
+  {
+    slug: "maalem",
+    term: "Maâlem",
+    term_darija: "Maâlem",
+    term_arabic: "معلم",
+    definition:
+      "Master craftsperson. In the kitchen, the maâlem is the cook who runs a wedding, a hammam tangia, a school canteen. Maâlma is the feminine. The title comes by reputation, not certificate.",
+    categories: ["celebration", "everyday"],
+    related_entries: [
+      { type: "dish", slug: "tangia" },
+    ],
+  },
 ];
