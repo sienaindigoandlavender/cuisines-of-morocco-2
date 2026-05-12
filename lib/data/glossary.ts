@@ -51,7 +51,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "M'qalli",
     term_arabic: "مقلي",
     definition:
-      "The yellow tagine — saffron, ginger, olive oil, no paprika. Usually chicken with preserved lemon and green olives. The bright sister to m'hammar's red.",
+      "The yellow tagine — saffron, ginger, olive oil, no paprika. Usually chicken with preserved lemon and green olives.",
     categories: ["savory", "stew"],
     related_entries: [
       { type: "ingredient", slug: "saffron" },
@@ -180,7 +180,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Tfaya",
     term_arabic: "التفاية",
     definition:
-      "The sweet topping of caramelised onion, raisins, cinnamon, and honey that crowns a couscous or a chicken tagine — the Andalusi gesture inside the savoury course.",
+      "The sweet topping of caramelised onion, raisins, cinnamon, and honey that crowns a couscous or a chicken tagine — an Andalusi habit, sweetness inside the savoury course.",
     categories: ["sweet", "savory", "condiment"],
     related_entries: [
       { type: "dish", slug: "couscous-tfaya" },
@@ -249,7 +249,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term_darija: "Meloui",
     term_arabic: "ملوي",
     definition:
-      "Msemen's thinner sibling — a long ribbon of oiled dough wound into a flat spiral and pan-fried. Crisper, more shattering, less foldable.",
+      "A thinner version of msemen — a long ribbon of oiled dough wound into a flat spiral and pan-fried. Shatters when you bite it.",
     categories: ["bread", "breakfast"],
   },
   {
@@ -265,7 +265,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Taktouka",
     term_arabic: "تكتوكة",
     definition:
-      "The pepper cousin to zaalouk. Green pepper and tomato, smoke from the grill, lemon at the end. Served cold, lifted with bread.",
+      "Like zaalouk, but with green pepper instead of aubergine. Tomato, smoke from the grill, lemon at the end. Served cold, lifted with bread.",
     categories: ["savory", "salad", "condiment"],
   },
   {
@@ -497,7 +497,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Zebda",
     term_arabic: "زبدة",
     definition:
-      "Fresh, unsalted butter — the young, sweet kin of smen. Whisked into bread dough, melted over baghrir, mounded into a small bowl beside the breakfast bread.",
+      "Fresh, unsalted butter — what smen is before the salt and the years. Whisked into bread dough, melted over baghrir, mounded into a small bowl beside the breakfast bread.",
     categories: ["fat", "breakfast", "everyday"],
     related_entries: [
       { type: "ingredient", slug: "smen" },
