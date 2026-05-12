@@ -518,7 +518,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term_darija: "Zitoun Beldi",
     term_arabic: "زيتون بلدي",
     definition:
-      "Black, oil-cured, wrinkled. The country olive of the Moroccan table — bitter, salty, eaten with bread for breakfast or beside the harira. Beldi means 'of the country' — the local, the unimproved, the honest.",
+      "Black, oil-cured, wrinkled. The country olive of the Moroccan table — bitter, salty, eaten with bread for breakfast or beside the harira. Beldi means 'of the country' — the opposite of roumi, which now means 'foreign' and originally meant 'Roman'.",
     categories: ["bitter", "salty", "preserve", "breakfast"],
     related_entries: [
       { type: "ingredient", slug: "olive-oil" },
@@ -532,7 +532,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Iftar",
     term_arabic: "إفطار",
     definition:
-      "The sunset meal that breaks the Ramadan fast. The order is fixed: dates and milk first, then harira, then chebakia, then everything else. The first iftar of the month is a returning; the last is a letting-go.",
+      "The sunset meal that breaks the Ramadan fast. The order is fixed: dates and milk first, then harira, then chebakia, then everything else. In Moroccan cities the midfa al iftar — the iftar cannon — still fires at sundown; ten minutes later the streets are empty and every household is at the table.",
     categories: ["ramadan", "celebration"],
     related_entries: [
       { type: "dish", slug: "harira" },
